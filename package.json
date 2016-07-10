@@ -47,6 +47,7 @@
     "node": "0.10.x"
   },
   "dependencies": {
+    "object-assign": "^4.1.0",
     "async": "^0.9.0",
     "body-parser": "^1.14.1",
     "bootevent": "0.0.1",
