@@ -15,7 +15,7 @@ function config ( ) {
   /*
    * See README.md for info about all the supported ENV VARs
    */
-  env.DISPLAY_UNITS = readENV('DISPLAY_UNITS', 'mmol/L');
+  env.DISPLAY_UNITS = readENV('DISPLAY_UNITS', 'mmol');
   env.PORT = readENV('PORT', 1337);
   
   
