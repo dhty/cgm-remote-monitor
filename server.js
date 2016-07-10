@@ -30,6 +30,8 @@ var env = require('./env')( );
 var language = require('./lib/language')();
 var translate = language.set(env.settings.language).translate;
 
+Object.assign=require('object-assign')
+
 ///////////////////////////////////////////////////
 // setup http server
 ///////////////////////////////////////////////////
