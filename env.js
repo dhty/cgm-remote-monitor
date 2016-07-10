@@ -18,7 +18,7 @@ function config ( ) {
   env.DISPLAY_UNITS = readENV('DISPLAY_UNITS', 'mmol');
   env.PORT = readENV('PORT', 1337);
   
-  
+  env.MONGO_CONNECTION = readENV('MONGO_CONNECTION', 'mongodb://nightscout:nightscout@ds034279.mlab.com:34279/nightscout');
   
   env.static_files = readENV('NIGHTSCOUT_STATIC_FILES', __dirname + '/static/');
 
