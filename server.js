@@ -26,6 +26,23 @@
 // DB Connection setup and utils
 ///////////////////////////////////////////////////
 
+var logRecord = require('koa-logs-full');
+var app = koa();
+
+//最好放在顶部，在其他中间件之前调用
+app.use(logRecord(app,{
+  logdir: path.join(__dirname, 'logs')
+}));
+
+//使用时：
+
+app.use(function*(next){
+  //任何能够拿到context的地方都可以使用
+  this.logger.log("我是要输出的文本");
+  //也可以使用error,warn,info.在终端输出的颜色会不同
+})
+
+
 var env = require('./env')( );
 var language = require('./lib/language')();
 var translate = language.set(env.settings.language).translate;
